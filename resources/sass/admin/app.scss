@@ -1,0 +1,27 @@
+// fonts awesome
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+// startbootstrap
+@import "~startbootstrap-sb-admin-2/scss/sb-admin-2.scss";
+
+// n progress bar
+@import "nprogress/nprogress.css";
+
+// overlay spinner
+@import "vue-loading-overlay/dist/vue-loading.css";
+
+// toast
+@import "vue-toastification/dist/index.css";
+
+// sweet alert
+@import "sweetalert2/src/sweetalert2.scss";
+// wysiwyg ediotr
+@import "~vue-wysiwyg/dist/vueWysiwyg.css";
+
+//custom style
+@import "./custom.scss";
+
+// profile component style
+@import "./profile.scss";
+
+

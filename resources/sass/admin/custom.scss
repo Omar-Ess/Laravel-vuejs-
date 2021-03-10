@@ -1,0 +1,209 @@
+// -------------------------------------------Theme Customization-----------------------------------------
+// general
+#wrapper #content-wrapper {
+    background-color: #FFFFFF !important;
+
+}
+// utilities
+.btn-orange {
+    color: #fff;
+    background-color: #f96302;
+    border-color: #f96302;
+}
+.btn-orange:hover {
+    color: #fff;
+
+    background: #f84b06;
+    border-color: #f84b06;
+}
+.btn-outline-orange {
+    color: #f96302;
+    background-color: #fff;
+    border-color: #f96302;
+}
+.btn-outline-orange:hover {
+    color: #fff;
+    background-color: #f96302;
+    border-color: #f96302;
+}
+
+.btn-black {
+    color: #fff;
+    background-color: #0c0703;
+    border-color: #0c0703;
+}
+.btn-black:hover {
+    color: #fff;
+
+    background: #0c0703;
+    border-color: #0c0703;
+}
+.btn-outline-black {
+    color: #0c0703;
+    background-color: #fff;
+    border-color: #0c0703;
+}
+.btn-outline-black:hover {
+    color: #fff;
+    background-color: #0c0703;
+    border-color: #0c0703;
+}
+.border-left-orange {
+    border-left: 0.25rem solid #f96302 !important;
+    // background-color: #faf0e9,
+}
+.border-left-purple {
+    border-left: 0.25rem solid #dd2467 !important;
+}
+.bg-black {
+    color: #fff !important;
+    background-color: #0c0703 !important;
+    border-color: #0c0703 !important;
+
+}
+.bg-orange {
+    color: #fff !important;
+    background-color: #f96302 !important;
+    border-color: #f96302 !important;
+
+}
+.link-black {
+    color: black !important;
+    text-decoration: none !important;
+}
+// custom table header that looks like a sticker
+.card-header-sticker {
+    border-bottom: none;
+    border-radius: 6px !important;
+    margin-top: -20px !important;
+    padding: 28px;
+    background-color: #f96302 !important    ;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%),
+        0 7px 10px -5px rgb(198 135 235 / 40%);
+    margin: 0 10px;
+    width: 90px;
+}
+
+.card-sticker {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+}
+
+@media (max-width: 500px) {
+    #card-header-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// Sidebar
+
+.sidebar {
+    background: url("/storage/images/design/sidebar-bg.jpg") no-repeat scroll
+        left top transparent;
+    background-size: 280px 1770px;
+    position: relative;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+        0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    width: 300px !important;
+}
+@media (max-width: 600px) {
+    .sidebar {
+        width: 9rem !important;
+    }
+}
+.sidebar:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.671) !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+.sidebar.toggled {
+    overflow: visible;
+    width: 8.2rem !important;
+}
+@media (max-width: 600px) {
+    .sidebar.toggled {
+        overflow: hidden;
+        width: 0rem !important;
+    }
+}
+
+#sidebarToggle {
+    z-index: 100000000;
+    color: white;
+}
+
+// .router-link-exact-active {
+//     background-color: #F96302;
+//     color: white !important;
+// }
+//
+.sidebar {
+    .nav-item {
+        color: white !important;
+        margin: 0 auto;
+        width: 90%;
+        padding-right: 2px !important;
+    }
+
+    .router-link-active {
+        background-color: #f96302;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px 0 #5f3011;
+    }
+}
+
+// override icon blurry color
+.sidebar-dark .nav-item .nav-link i {
+    color: white !important;
+}
+.sidebar-divider {
+    z-index: 100000000000000000;
+}
+.sidebar-heading {
+    z-index: 100000000000000000;
+    color: white !important;
+}
+// --------------------------------------------End Theme Customization----------------------------------
+// --------------------------------------------Random-----------------------------------------------
+// avatar
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #b8ceff;
+}
+
+/* Progress bar */
+#nprogress .bar {
+    background: #f96302 !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px #f96302, 0 0 5px #f96302;
+}
+
+#nprogress .spinner-icon {
+    display: none;
+}
+
+.editr {
+    border: 2px solid #d1d3e2 !important;
+    width: 100%;
+}
+.editr:focus {
+    background-color: yellow !important;
+}
+
+.bg-login-image {
+    background-image: url("/storage/images/design/login-bg.jpg");
+}
+
+// --------------------------------------------End Random-----------------------------------------------
