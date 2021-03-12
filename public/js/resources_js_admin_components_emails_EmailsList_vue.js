@@ -623,7 +623,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("span", { staticClass: "d-none d-md-block" }, [
-                    _vm._v(" Boîte de réception")
+                    _vm._v(" Historique Locale")
                   ])
                 ]
               )

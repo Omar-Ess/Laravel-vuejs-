@@ -10,8 +10,8 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        $products = Product::orderBy('id' , 'desk')->get();
-        $categories = Category::orderBy('id' , 'desk')->get();
+        $products = Product::orderBy('id' , 'desc')->get();
+        $categories = Category::orderBy('id' , 'desc')->get();
 
         return view('pages.gallery.index')->with([
             'products'=> $products,

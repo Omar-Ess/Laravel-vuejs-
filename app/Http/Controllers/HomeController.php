@@ -18,7 +18,7 @@ class HomeController extends Controller
     {
         $header = Section::where('name', 'header')->first();
         $about = Section::where('name', 'about')->first();
-        $latestProducts = Product::latest()->take(6)->get();
+        $latestProducts = Product::orderBy('id' , 'desc')->take(6)->get();
 
         return view('pages.index')->with([
             'header'=>$header,

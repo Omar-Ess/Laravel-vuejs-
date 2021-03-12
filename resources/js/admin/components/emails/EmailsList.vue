@@ -30,7 +30,7 @@
                   <span class="d-block d-md-none"
                     ><i class="fa fa-inbox"></i
                   ></span>
-                  <span class="d-none d-md-block"> Boîte de réception</span>
+                  <span class="d-none d-md-block"> Historique Locale</span>
                 </a>
               </li>
             </ul>
