@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products =  Product::latest()->with('category')->get();
+        $products =  Product::orderBy('id' , 'desk')->with('category')->get();
         return response()->json([
             'products' => $products
         ], 200);

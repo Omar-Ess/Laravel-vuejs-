@@ -58,7 +58,7 @@
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nos réseaux sociaux</h4>
-                        <p>n'hésitez pas à nous consulter sur les réseaux sociaux</p>
+                        <p>N'hésitez pas à nous consulter sur les réseaux sociaux</p>
                         <div class="social-links mt-3">
                             @if ($facebook->content != '')
                                 <a href="{{ $facebook->content }}" class="facebook"><i
