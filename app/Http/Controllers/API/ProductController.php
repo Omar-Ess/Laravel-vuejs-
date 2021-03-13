@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products =  Product::orderBy('id' , 'desc')->with('category')->get();
+        $products =  Product::orderBy('id', 'desc')->with('category')->get();
         return response()->json([
             'products' => $products
         ], 200);
@@ -34,17 +34,18 @@ class ProductController extends Controller
      */
     public function store(ProductStoreRequest $request)
     {
-        // dd($request->desc);
-        // file upload
 
-        $fileNameToDB = $this->uploadFile($request);
 
 
         $product = new Product();
         $product->title = $request->title == null ? '' : $request->title;
         $product->desc = $request->desc == null ? '' : $request->desc;
         $product->category_id = $request->category_id;
-        $product->image = $fileNameToDB;
+        $product->save();
+        // file upload
+        $fileNameToDB = $this->uploadFile($request, $product->id);
+        $product->image = $fileNameToDB[0];
+        $product->resizedImage = $fileNameToDB[1];
         $product->save();
         return response()->json([
             'message' => 'product created succefully',
@@ -76,8 +77,10 @@ class ProductController extends Controller
     {
         // file upload
         if ($request->hasFile('newImage')) {
-            $product->deleteOldImage();
-            $product->image = $this->uploadFile($request);
+            $product->deleteOldImages();
+            $fileNameToDB = $this->uploadFile($request, $product->id);
+            $product->image = $fileNameToDB[0];
+            $product->resizedImage = $fileNameToDB[1];
         }
 
         $product->title = $request->title == null ? '' : $request->title;
@@ -99,9 +102,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        if ($product->image != '/storage/images/products/noimage.jpg') {
-            $product->deleteOldImage();
-        }
+
+        $product->deleteOldImages();
         $product->delete();
         return response()->json([
             'message' => 'product deleted succefully'
@@ -112,28 +114,30 @@ class ProductController extends Controller
         $idsExploded = explode(',', $ids);
         foreach ($idsExploded as $id) {
             $product =  Product::findOrFail($id);
-            if ($product->image != '/storage/images/products/noimage.jpg') {
-                $product->deleteOldImage();
-            }
+            $product->deleteOldImages();
             $product->delete();
         }
         return response()->json([
             'message' => "product(s) have been deleted",
         ], 200);
     }
-    private function uploadFile($request)
+    private function uploadFile($request, $productId)
     {
-        global $fileNameToDB;
-
-
         $fileNameWithExt = $request->file('newImage')->getClientOriginalName();
         $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
         $extension = $request->file('newImage')->getClientOriginalExtension();
-        $fileNameToStore = $filename . '_' . time() . Str::random(10) . '.' . $extension;
-        $fileNameToDB = '/storage/images/products/' . $fileNameToStore;
-        $request->file('newImage')->storeAs('public/images/products/', $fileNameToStore);
-        Image::make(public_path('storage/images/products/' . $fileNameToStore))->fit(800, 600)->save();
 
-        return $fileNameToDB;
+        // normal size upload
+        $fileNameToStore = $filename . '_' . time() . Str::random(10) . '.' . $extension;
+        $request->file('newImage')->storeAs('public/images/products/' . $productId, $fileNameToStore);
+        // resized upload
+        $fileNameToStoreResized = $filename . '_resized_' . time() . Str::random(10) . '.' . $extension;
+        $request->file('newImage')->storeAs('public/images/products/' . $productId, $fileNameToStoreResized);
+        Image::make(public_path('storage/images/products/' . $productId . '/' . $fileNameToStoreResized))->fit(800, 600)->save();
+
+        // save normal and resized in database
+        $fileNameToDB = '/storage/images/products/' . $productId . '/' . $fileNameToStore;
+        $fileNameToDBResized = '/storage/images/products/' . $productId . '/' . $fileNameToStoreResized;
+        return [$fileNameToDB, $fileNameToDBResized];
     }
 }

@@ -91,7 +91,7 @@
                   <img
                     width="100"
                     height="100"
-                    :src="product.image"
+                    :src="product.resizedImage"
                     class="img-fluid"
                   />
                 </td>

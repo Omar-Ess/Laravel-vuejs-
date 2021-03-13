@@ -20,7 +20,7 @@ export const fireConfirmation = callbackfn => {
         text: "Vous ne pourrez pas annuler cela !",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#f96302",
+        confirmButtonColor: "#922522",
         cancelButtonColor: "black",
         confirmButtonText: "Oui, supprimez-le(s)",
         cancelButtonText: "Annuler"

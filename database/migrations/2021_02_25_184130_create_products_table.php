@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->text('desc')->nullable();
+            $table->text('resizedImage');
             $table->text('image');
             $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();

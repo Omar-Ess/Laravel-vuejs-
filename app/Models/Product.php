@@ -16,16 +16,12 @@ class Product extends Model
     public function category()
     {
         return  $this->belongsTo('App\Models\Category')->withDefault([
-            'name'=> 'Inconnue'
+            'name' => 'Inconnue'
         ]);
     }
-    public function deleteOldImage()
+    public function deleteOldImages()
     {
-        $productImageName = explode('/storage/images/products/', $this->image);
-        // hadi dratni f rassi khasni n39el elach dertha
-        if (count($productImageName) > 1) {
-            $productImagePath =  "/public/images/products/" . $productImageName[1];
-            Storage::delete($productImagePath);
-        }
+        $path =  "/public/images/products/" . $this->id;
+        Storage::deleteDirectory($path);
     }
 }

@@ -817,7 +817,7 @@ var render = function() {
                                 attrs: {
                                   width: "100",
                                   height: "100",
-                                  src: product.image
+                                  src: product.resizedImage
                                 }
                               })
                             ]),

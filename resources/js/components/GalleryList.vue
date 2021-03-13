@@ -60,7 +60,7 @@
                     v-for="product in paginated('filteredProducts')"
                     :key="product.id"
                   >
-                    <img :src="product.image" class="img-fluid" alt="" />
+                    <img :src="product.resizedImage" class="img-fluid" alt="" />
                     <div class="portfolio-info">
                       <h4>{{ product.title | truncate }}</h4>
 

@@ -33,7 +33,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 
 // admin

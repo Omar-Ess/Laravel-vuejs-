@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer('includes.footer', function ($view) {
             $email = Section::where('name', 'email')->first();
             $address = Section::where('name', 'address')->first();
-            $phone = Section::where('name', 'phone number')->first();
+            $phone = Section::where('name', 'phone ')->first();
             $facebook = Section::where('name', 'facebook')->first();
             $instagram = Section::where('name', 'instagram')->first();
 
@@ -43,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('includes.navbar', function ($view) {
             $email = Section::where('name', 'email')->first();
-            $phone = Section::where('name', 'phone number')->first();
+            $phone = Section::where('name', 'phone')->first();
             $facebook = Section::where('name', 'facebook')->first();
             $instagram = Section::where('name', 'instagram')->first();
 
@@ -57,7 +57,7 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('includes.contact-section', function ($view) {
             $email = Section::where('name', 'email')->first();
-            $phone = Section::where('name', 'phone number')->first();
+            $phone = Section::where('name', 'phone ')->first();
             $address = Section::where('name', 'address')->first();
 
             $view->with([

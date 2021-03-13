@@ -54051,7 +54051,10 @@ var render = function() {
                                 [
                                   _c("img", {
                                     staticClass: "img-fluid",
-                                    attrs: { src: product.image, alt: "" }
+                                    attrs: {
+                                      src: product.resizedImage,
+                                      alt: ""
+                                    }
                                   }),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "portfolio-info" }, [
