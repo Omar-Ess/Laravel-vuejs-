@@ -467,10 +467,10 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 92vh;
+    height: 98vh;
     background: url("/storage/images/design/hero-bg.jpg") no-repeat;
     image-rendering: -webkit-optimize-contrast;
-    background-position: 15% 90%;
+    background-position: 5% 90% ;
     background-size: cover;
     position: relative;
 }
@@ -537,14 +537,10 @@ h6 {
     color: white;
 }
 
-@media (min-width: 1024px) {
-    #hero {
-        background-attachment: fixed;
-    }
-}
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     #hero {
         background-position: 50% 50%;
+
     }
 }
 @media (max-width: 768px) {
@@ -1051,7 +1047,7 @@ section {
   --------------------------------------------------------------*/
 .portfolio-input {
     padding: 26px !important;
-    border-radius: 15px;
+    border-radius: 28px;
 }
 .portfolio-flters-wrapper {
     padding: 0 !important;
@@ -1065,7 +1061,6 @@ section {
 
 .portfolio #portfolio-flters li {
     cursor: pointer;
-    display: inline-block;
     padding: 10px 15px 8px 15px;
     font-size: 16px;
     font-weight: 600;

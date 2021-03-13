@@ -807,7 +807,15 @@ var render = function() {
                             _vm._v(" "),
                             _c("td", [_vm._v(_vm._s(product.id))]),
                             _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(product.title))]),
+                            _c("td", [
+                              _vm._v(
+                                _vm._s(
+                                  product.title
+                                    ? product.title
+                                    : "Aucun titre disponible"
+                                )
+                              )
+                            ]),
                             _vm._v(" "),
                             _c("td", [_vm._v(_vm._s(product.category.name))]),
                             _vm._v(" "),

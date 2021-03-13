@@ -32,11 +32,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <p v-if="selectedProduct.desc.length">{{ selectedProduct.desc }}</p>
+            <p v-if="selectedProduct.desc.length" v-html=" selectedProduct.desc "></p>
             <p v-else>  Aucun description disponible</p>
 
           </div>
-       
+
         </div>
       </div>
     </div>

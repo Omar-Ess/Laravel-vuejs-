@@ -85,7 +85,7 @@
                   />
                 </td>
                 <td>{{ product.id }}</td>
-                <td>{{ product.title }}</td>
+                <td>{{ product.title ? product.title: 'Aucun titre disponible'  }}</td>
                 <td>{{ product.category.name }}</td>
                 <td>
                   <img

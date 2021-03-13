@@ -105,7 +105,7 @@
                     @foreach ($latestProducts as $product)
 
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <img src="{{ $product->image }}" class="img-fluid" alt="">
+                            <img src="{{ $product->resizedImage }}" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>{{ Str::limit($product->title, 25, $end = '...') }}</h4>
                                 <a href="{{ $product->image }}" data-gall="portfolioGallery" class="venobox preview-link"

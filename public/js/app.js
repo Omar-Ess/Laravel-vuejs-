@@ -53877,7 +53877,9 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _vm.selectedProduct.desc.length
-                  ? _c("p", [_vm._v(_vm._s(_vm.selectedProduct.desc))])
+                  ? _c("p", {
+                      domProps: { innerHTML: _vm._s(_vm.selectedProduct.desc) }
+                    })
                   : _c("p", [_vm._v("  Aucun description disponible")])
               ])
             ])

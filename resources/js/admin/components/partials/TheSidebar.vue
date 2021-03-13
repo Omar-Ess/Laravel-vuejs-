@@ -209,7 +209,7 @@ export default {
 
 <style scoped>
 .sidebar-brand-text span {
-  color: #cc1616;
+  color: #922522;
 
   font-weight: 600;
 

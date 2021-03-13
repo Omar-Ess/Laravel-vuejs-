@@ -21,7 +21,8 @@
                         <i class="bx bx-store-alt"></i>
                         <div>
                             <h5>{{ config('app.name') }}</h5>
-                            <p>"wa exploiter le pouvoir des vêtements et des sacs"
+                            <p>"Nous exploiter le pouvoir des vêtements et des sacs"
+                                
                             </p>
                         </div>
                     </li>
