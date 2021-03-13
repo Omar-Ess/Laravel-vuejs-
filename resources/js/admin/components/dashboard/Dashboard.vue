@@ -63,13 +63,13 @@
               ></doughnut-chart>
               <div class="mt-4 text-center small">
                 <span class="mr-2">
-                  <i class="fas fa-circle " style="color : #dd2467"></i> Utilisateurs
+                  <i class="fas fa-circle " style="color : #922522"></i> Utilisateurs
                 </span>
                 <span class="mr-2">
-                  <i class="fas fa-circle " style="color : #23C4D8"></i> Produits
+                  <i class="fas fa-circle " style="color : #255E91"></i> Produits
                 </span>
                 <span class="mr-2">
-                  <i class="fas fa-circle "  style="color : #51AB55 "></i> Catégories
+                  <i class="fas fa-circle "  style="color : #005E3C "></i> Catégories
                 </span>
               </div>
             </div>

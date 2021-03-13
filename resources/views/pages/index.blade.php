@@ -115,7 +115,7 @@
                         </div>
                     @endforeach
                     <a href="{{ route('gallery.index') }}" class="btn btn-warning btn-block"
-                        style="background-color: #e72323;color: #ffff;">Voir plus</a>
+                        style="background-color: #922522;color: #ffff;">Voir plus</a>
                 </div>
 
             </div>

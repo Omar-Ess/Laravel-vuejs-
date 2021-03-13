@@ -17,14 +17,9 @@
         </div>
         <div class="ml-auto align-self-center p-3">
           <!-- <button class="btn btn-secondary"> <i class="fa fa-sync-alt"></i> </button> -->
-          <router-link :to="{ name: 'products.create' }">
-            <button class="btn btn-outline-orange mr-2">
-              <i class="fa fa-plus-circle"></i>
-              <span> Ajouter Produit</span>
-            </button>
-          </router-link>
+
           <button
-            class="btn btn-black mr-2"
+            class="btn btn-outline-black mr-2"
             @click="prepareBulkDeleteProducts"
             :disabled="postIsLoading"
           >
@@ -33,6 +28,12 @@
             </span>
             <span v-else> <i class="fa fa-dumpster"></i> Suppression </span>
           </button>
+          <router-link :to="{ name: 'products.create' }">
+            <button class="btn btn-orange mr-2">
+              <i class="fa fa-plus-circle"></i>
+              <span> Ajouter Produit</span>
+            </button>
+          </router-link>
         </div>
       </div>
       <div class="card-body">
@@ -124,8 +125,7 @@
         </div>
       </div>
     </div>
-                  <product-item :selected-product="selectedProduct" />
-
+    <product-item :selected-product="selectedProduct" />
   </div>
   <!-- /.container-fluid -->
 </template>
@@ -201,7 +201,7 @@ export default {
     });
   },
   created() {
-    this.fetchProducts()
+    this.fetchProducts();
   },
 };
 </script>

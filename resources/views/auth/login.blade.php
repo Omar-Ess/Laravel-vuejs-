@@ -54,7 +54,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-danger btn-user btn-block">
+                            <button type="submit" class="btn btn-orange btn-user btn-block">
                                 {{ __('Login') }}
                             </button>
 

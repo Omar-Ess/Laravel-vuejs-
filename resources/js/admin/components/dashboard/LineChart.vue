@@ -16,7 +16,7 @@ export default {
             label: "Produits Ajoutés",
             backgroundColor: "#faebe9",
             hoverBackgroundColor: "#e1f8e2",
-            borderColor: "#cc1616",
+            borderColor: "#922522",
             data: [],
           },
         ],

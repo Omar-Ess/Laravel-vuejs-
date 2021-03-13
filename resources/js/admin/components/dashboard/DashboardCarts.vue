@@ -9,7 +9,7 @@
             <div class="col mr-2">
               <div
                 class="text-xs font-weight-bold text-uppercase mb-1"
-                style="color: #cc1616"
+                style="color: #922522"
               >
                 Utilisateurs
               </div>
@@ -38,12 +38,13 @@
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-success shadow h-100">
+      <div class="card border-left-green shadow h-100">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div
-                class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                class="text-xs font-weight-bold  text-uppercase mb-1"
+                style="color  : #005E3C"
               >
                 Catégories
               </div>
@@ -78,13 +79,13 @@
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-purple shadow h-100">
+      <div class="card border-left-red shadow h-100">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div
                 class="text-xs font-weight-bold text-uppercase mb-1"
-                style="color: #dd2467"
+                style="color: #922522"
               >
                 Produits
               </div>
@@ -99,7 +100,7 @@
                   <div class="progress progress-sm mr-2">
                     <div
                       class="progress-bar"
-                      style=" background-color : #dd2467 ; width: 50%"
+                      style=" background-color : #922522 ; width: 50%"
                       role="progressbar"
                       aria-valuenow="200"
                       aria-valuemin="0"
@@ -125,12 +126,13 @@
 
     <!-- Pending Requests Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-info shadow h-100">
+      <div class="card border-left-blue shadow h-100">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
               <div
-                class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                class="text-xs font-weight-bold  text-uppercase mb-1"
+                style="color : #255E91"
               >
                 Sections
               </div>

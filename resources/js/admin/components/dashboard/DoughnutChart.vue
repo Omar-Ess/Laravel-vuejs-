@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             borderWidth: 1,
-            backgroundColor: ["#dd2467", "#51AB55", "#23C4D8"],
+            backgroundColor: ["#922522", "#005E3C", "#255E91"],
             data: [
               this.data.usersCount,
               this.data.categoriesCount,

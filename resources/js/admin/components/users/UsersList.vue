@@ -17,14 +17,9 @@
         </div>
         <div class="ml-auto align-self-center p-3" v-if="authUser.is_admin">
           <!-- <button class="btn btn-secondary"> <i class="fa fa-sync-alt"></i> </button> -->
-          <router-link :to="{ name: 'users.create' }">
-            <button class="btn btn-outline-orange mr-2">
-              <i class="fa fa-plus-circle"></i>
-              <span> Ajouter Utilisateur</span>
-            </button>
-          </router-link>
+
           <button
-            class="btn btn-black mr-2"
+            class="btn btn-outline-black mr-2"
             @click="prepareBulkDeleteUsers"
             :disabled="postIsLoading"
           >
@@ -33,6 +28,12 @@
             </span>
             <span v-else> <i class="fa fa-dumpster"></i> Suppression </span>
           </button>
+          <router-link :to="{ name: 'users.create' }">
+            <button class="btn btn-orange mr-2">
+              <i class="fa fa-plus-circle"></i>
+              <span> Ajouter Utilisateur</span>
+            </button>
+          </router-link>
         </div>
       </div>
       <div class="card-body">

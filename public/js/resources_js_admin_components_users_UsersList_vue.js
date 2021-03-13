@@ -152,6 +152,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -346,25 +347,9 @@ var render = function() {
                   { staticClass: "ml-auto align-self-center p-3" },
                   [
                     _c(
-                      "router-link",
-                      { attrs: { to: { name: "users.create" } } },
-                      [
-                        _c(
-                          "button",
-                          { staticClass: "btn btn-outline-orange mr-2" },
-                          [
-                            _c("i", { staticClass: "fa fa-plus-circle" }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(" Ajouter Utilisateur")])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
                       "button",
                       {
-                        staticClass: "btn btn-black mr-2",
+                        staticClass: "btn btn-outline-black mr-2",
                         attrs: { disabled: _vm.postIsLoading },
                         on: { click: _vm.prepareBulkDeleteUsers }
                       },
@@ -380,6 +365,18 @@ var render = function() {
                               _c("i", { staticClass: "fa fa-dumpster" }),
                               _vm._v(" Suppression ")
                             ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      { attrs: { to: { name: "users.create" } } },
+                      [
+                        _c("button", { staticClass: "btn btn-orange mr-2" }, [
+                          _c("i", { staticClass: "fa fa-plus-circle" }),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(" Ajouter Utilisateur")])
+                        ])
                       ]
                     )
                   ],

@@ -317,6 +317,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -350,7 +352,7 @@ __webpack_require__.r(__webpack_exports__);
         labels: ["Utilisateurs", "Catégories", "Produits"],
         datasets: [{
           borderWidth: 1,
-          backgroundColor: ["#dd2467", "#51AB55", "#23C4D8"],
+          backgroundColor: ["#922522", "#005E3C", "#255E91"],
           data: [this.data.usersCount, this.data.categoriesCount, this.data.productsCount]
         }]
       },
@@ -412,7 +414,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           label: "Produits Ajoutés",
           backgroundColor: "#faebe9",
           hoverBackgroundColor: "#e1f8e2",
-          borderColor: "#cc1616",
+          borderColor: "#922522",
           data: []
         }]
       },
@@ -38792,7 +38794,7 @@ var staticRenderFns = [
       _c("span", { staticClass: "mr-2" }, [
         _c("i", {
           staticClass: "fas fa-circle ",
-          staticStyle: { color: "#dd2467" }
+          staticStyle: { color: "#922522" }
         }),
         _vm._v(" Utilisateurs\n              ")
       ]),
@@ -38800,7 +38802,7 @@ var staticRenderFns = [
       _c("span", { staticClass: "mr-2" }, [
         _c("i", {
           staticClass: "fas fa-circle ",
-          staticStyle: { color: "#23C4D8" }
+          staticStyle: { color: "#255E91" }
         }),
         _vm._v(" Produits\n              ")
       ]),
@@ -38808,7 +38810,7 @@ var staticRenderFns = [
       _c("span", { staticClass: "mr-2" }, [
         _c("i", {
           staticClass: "fas fa-circle ",
-          staticStyle: { color: "#51AB55" }
+          staticStyle: { color: "#005E3C" }
         }),
         _vm._v(" Catégories\n              ")
       ])
@@ -38847,7 +38849,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "text-xs font-weight-bold text-uppercase mb-1",
-                  staticStyle: { color: "#cc1616" }
+                  staticStyle: { color: "#922522" }
                 },
                 [_vm._v("\n              Utilisateurs\n            ")]
               ),
@@ -38893,15 +38895,15 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
-      _c("div", { staticClass: "card border-left-success shadow h-100" }, [
+      _c("div", { staticClass: "card border-left-green shadow h-100" }, [
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "row no-gutters align-items-center" }, [
             _c("div", { staticClass: "col mr-2" }, [
               _c(
                 "div",
                 {
-                  staticClass:
-                    "text-xs font-weight-bold text-success text-uppercase mb-1"
+                  staticClass: "text-xs font-weight-bold  text-uppercase mb-1",
+                  staticStyle: { color: "#005E3C" }
                 },
                 [_vm._v("\n              Catégories\n            ")]
               ),
@@ -38954,7 +38956,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
-      _c("div", { staticClass: "card border-left-purple shadow h-100" }, [
+      _c("div", { staticClass: "card border-left-red shadow h-100" }, [
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "row no-gutters align-items-center" }, [
             _c("div", { staticClass: "col mr-2" }, [
@@ -38962,7 +38964,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "text-xs font-weight-bold text-uppercase mb-1",
-                  staticStyle: { color: "#dd2467" }
+                  staticStyle: { color: "#922522" }
                 },
                 [_vm._v("\n              Produits\n            ")]
               ),
@@ -39013,15 +39015,15 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "col-xl-3 col-md-6 mb-4" }, [
-      _c("div", { staticClass: "card border-left-info shadow h-100" }, [
+      _c("div", { staticClass: "card border-left-blue shadow h-100" }, [
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "row no-gutters align-items-center" }, [
             _c("div", { staticClass: "col mr-2" }, [
               _c(
                 "div",
                 {
-                  staticClass:
-                    "text-xs font-weight-bold text-info text-uppercase mb-1"
+                  staticClass: "text-xs font-weight-bold  text-uppercase mb-1",
+                  staticStyle: { color: "#255E91" }
                 },
                 [_vm._v("\n              Sections\n            ")]
               ),
@@ -39097,7 +39099,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "progress progress-sm mr-2" }, [
         _c("div", {
           staticClass: "progress-bar",
-          staticStyle: { "background-color": "#dd2467", width: "50%" },
+          staticStyle: { "background-color": "#922522", width: "50%" },
           attrs: {
             role: "progressbar",
             "aria-valuenow": "200",

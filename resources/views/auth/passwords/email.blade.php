@@ -38,7 +38,7 @@
                             </div>
 
 
-                            <button type="submit" class="btn btn-danger btn-user btn-block">
+                            <button type="submit" class="btn btn-orange btn-user btn-block">
                                 {{ __('Envoyer une demande de réinitialisation') }}
                             </button>
 

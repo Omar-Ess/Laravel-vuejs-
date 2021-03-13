@@ -54531,7 +54531,8 @@ var render = function() {
                 _c(
                   "span",
                   {
-                    staticClass: "mr-2 d-none d-lg-inline text-gray-600 small"
+                    staticClass:
+                      "mr-2 d-none d-lg-inline text-gray-600 small text-capitalize"
                   },
                   [_vm._v(_vm._s(_vm.authUser.name))]
                 ),

@@ -14,13 +14,9 @@
         </div>
         <div><h1 class="h4 mt-4 text-gray-800">Tableau des Catégories</h1></div>
         <div class="ml-auto align-self-center p-3">
-          <router-link :to="{ name: 'categories.create' }">
-            <button class="btn btn-outline-orange mr-2">
-              <i class="fa fa-plus-circle"></i> <span> Ajouter Catégorie</span>
-            </button>
-          </router-link>
+
           <button
-            class="btn btn-black mr-2"
+            class="btn btn-outline-black mr-2"
             @click="prepareBulkDeleteCategories"
             :disabled="postIsLoading"
           >
@@ -29,6 +25,11 @@
             </span>
             <span v-else> <i class="fa fa-dumpster"></i> Suppression </span>
           </button>
+                    <router-link :to="{ name: 'categories.create' }">
+            <button class="btn btn-orange mr-2">
+              <i class="fa fa-plus-circle"></i> <span> Ajouter Catégorie</span>
+            </button>
+          </router-link>
         </div>
       </div>
       <div class="card-body">

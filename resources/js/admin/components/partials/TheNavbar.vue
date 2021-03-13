@@ -66,7 +66,7 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{
+          <span class="mr-2 d-none d-lg-inline text-gray-600 small text-capitalize">{{
             authUser.name
           }}</span>
           <img class="rounded-circle avatar" :src="authUser.avatar" />
