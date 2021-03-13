@@ -1,4 +1,4 @@
-<section id="contact" class="contact">
+<section id="contact" class="contact ">
     <div class="container">
 
         <div class="section-title"  data-aos="fade-up">
@@ -38,9 +38,8 @@
             <div class="row" >
 
                 <div class="col-lg-6 ">
-                    <iframe class="mb-4 mb-lg-0"
-                  src="https://www.google.com/maps/embed/v1/place?q=place_id:EipSdWUgZGVzIEFuZ2xhaXMsIENhc2FibGFuY2EgMjAyNTAsIE1vcm9jY28iLiosChQKEgktDbNUjtKnDRGcubXH0uY96RIUChIJOxGqeEfNpw0R0w8xT9jBBgs&key=AIzaSyDh0rcfCAfZt_OBjHtSFKFIKcFILkU-4VE"
-                    frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+
+                    <iframe style="border:0; width: 100%; height: 384px;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=26%20Av%20Mers%20Sultan.%20Etg%201%20Appt%203%20Casablanca&key=AIzaSyDh0rcfCAfZt_OBjHtSFKFIKcFILkU-4VE"></iframe>
                 </div>
 
                 <div class="col-lg-6" data-aos="fade-up" >

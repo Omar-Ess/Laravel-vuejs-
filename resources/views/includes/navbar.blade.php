@@ -1,9 +1,9 @@
         <!-- ======= Top Bar ======= -->
-        <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div id="topbar" class="d-none d-lg-flex align-items-center text-light fixed-top">
             <div class="container d-flex">
                 <div class="contact-info mr-auto">
                     <i class="fa fa-envelope"></i> <a href="mailto:{{ $email->content }}">{{ $email->content }}</a>
-                    <i class="fa fa-phone-alt"></i> {{ $phone->content }}
+                    <i class="fa fa-phone-alt ml-4"></i> {{ $phone->content }}
                 </div>
                 <div class="social-links">
                     @if ($facebook->content != '')
@@ -30,8 +30,8 @@
             <div class="container d-flex align-items-center">
 
                 <h1 class="logo mr-auto"><a href="{{ route('home.index') }}">
-                        <img class="rotate-n-15" src="/storage/images/design/logo.png" alt="">
-                        {{ config('app.name', 'Tapis') }}<span>.</span></a></h1>
+                        <img class="rotate-n-15 mb-3 " style="margin-right: -7px ; min-height : 50px" src="/storage/images/design/logo.png" alt="">
+                        {{ config('app.name') }}<span>.</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 {{-- <a href="index.html" class="logo mr-auto"><img src="/storage/images/design/logo.png" alt=""></a> --}}
 

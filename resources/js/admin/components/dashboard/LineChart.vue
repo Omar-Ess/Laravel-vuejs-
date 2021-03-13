@@ -14,9 +14,9 @@ export default {
           {
             borderWidth: 1.5,
             label: "Produits Ajoutés",
-            backgroundColor: "#faf0e9",
+            backgroundColor: "#faebe9",
             hoverBackgroundColor: "#e1f8e2",
-            borderColor: "#F96302",
+            borderColor: "#cc1616",
             data: [],
           },
         ],

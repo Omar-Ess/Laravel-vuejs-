@@ -9,7 +9,7 @@
             <div class="col mr-2">
               <div
                 class="text-xs font-weight-bold text-uppercase mb-1"
-                style="color: #f96302"
+                style="color: #cc1616"
               >
                 Utilisateurs
               </div>

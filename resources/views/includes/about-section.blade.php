@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-                <img src="/storage/images/design/login-bg.jpg" style="max-height: 600px; width:600px" class="img-fluid" alt="">
+                <img src="/storage/images/design/about-bg.jpg" style="max-height: 600px; width:600px" class="img-fluid  img-thumbnail" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
                 data-aos-delay="100">
@@ -20,9 +20,8 @@
                     <li>
                         <i class="bx bx-store-alt"></i>
                         <div>
-                            <h5>{{ config('app.name', 'Tapis') }}</h5>
-                            <p>{{ config('app.name', 'Tapis') }} est une combinaison de 3 magasins localisés dans
-                                l'ancienne médina
+                            <h5>{{ config('app.name') }}</h5>
+                            <p>"wa exploiter le pouvoir des vêtements et des sacs"
                             </p>
                         </div>
                     </li>

@@ -201,7 +201,7 @@ export default {
     });
   },
   created() {
-    this.fetchProducts();
+    this.fetchProducts()
   },
 };
 </script>

@@ -9,8 +9,8 @@
       class="sidebar-brand d-flex align-items-center justify-content-center"
       href="/"
     >
-      <div class="sidebar-brand-icon rotate-n-15">
-        <img src="/storage/images/design/logo.png" width="40" height="40" />
+      <div class="sidebar-brand-icon ">
+        <img src="/storage/images/design/logo.png"  style="margin-right: -12px ; max-height : 50px" />
       </div>
       <div class="sidebar-brand-text mx-3">{{ appName }} <span>.</span></div>
     </a>
@@ -209,7 +209,7 @@ export default {
 
 <style scoped>
 .sidebar-brand-text span {
-  color: #f96302;
+  color: #cc1616;
 
   font-weight: 600;
 

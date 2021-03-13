@@ -15,7 +15,7 @@ class SectionController extends Controller
      */
     public function index()
     {
-        $sections = Section::orderBy('id' , 'desc');
+        $sections = Section::all();
         return response()->json([
             'sections' => $sections
         ], 200);

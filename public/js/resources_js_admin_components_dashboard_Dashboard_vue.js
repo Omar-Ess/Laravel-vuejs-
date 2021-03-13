@@ -410,9 +410,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         datasets: [{
           borderWidth: 1.5,
           label: "Produits Ajoutés",
-          backgroundColor: "#faf0e9",
+          backgroundColor: "#faebe9",
           hoverBackgroundColor: "#e1f8e2",
-          borderColor: "#F96302",
+          borderColor: "#cc1616",
           data: []
         }]
       },
@@ -38847,7 +38847,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "text-xs font-weight-bold text-uppercase mb-1",
-                  staticStyle: { color: "#f96302" }
+                  staticStyle: { color: "#cc1616" }
                 },
                 [_vm._v("\n              Utilisateurs\n            ")]
               ),
