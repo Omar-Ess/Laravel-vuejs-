@@ -2309,7 +2309,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      appName: window.appName
+    };
+  }
+});
 
 /***/ }),
 
@@ -54454,22 +54460,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "sticky-footer bg-white" }, [
-      _c("div", { staticClass: "container my-auto" }, [
-        _c("div", { staticClass: "copyright text-center my-auto" }, [
-          _c("span", [_vm._v("Copyright © TapisLand 2021")])
-        ])
+  return _c("footer", { staticClass: "sticky-footer bg-white" }, [
+    _c("div", { staticClass: "container my-auto" }, [
+      _c("div", { staticClass: "copyright text-center my-auto" }, [
+        _c("span", [_vm._v("Copyright © " + _vm._s(_vm.appName) + " 2021")])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

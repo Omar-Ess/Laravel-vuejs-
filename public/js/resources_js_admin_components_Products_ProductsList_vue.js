@@ -57,6 +57,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     selectedProduct: Object
@@ -500,6 +503,7 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c("img", {
+                  staticClass: "img-fluid rounded",
                   attrs: {
                     src: _vm.selectedProduct.image,
                     width: "100%",
@@ -536,7 +540,9 @@ var render = function() {
                     ),
                 _vm._v(" "),
                 _vm.selectedProduct.desc.length
-                  ? _c("p", [_vm._v(_vm._s(_vm.selectedProduct.desc))])
+                  ? _c("p", {
+                      domProps: { innerHTML: _vm._s(_vm.selectedProduct.desc) }
+                    })
                   : _c("p", [_vm._v("Aucun description disponible")])
               ])
             ])
@@ -821,7 +827,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("td", [
                               _c("img", {
-                                staticClass: "img-fluid",
+                                staticClass: "img-fluid img-thumbnail",
                                 attrs: {
                                   width: "100",
                                   height: "100",

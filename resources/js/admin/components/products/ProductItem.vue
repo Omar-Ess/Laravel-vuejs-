@@ -23,7 +23,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <img :src="selectedProduct.image" width="100%" alt="" />
+            <img :src="selectedProduct.image" class="img-fluid rounded" width="100%" alt="" />
 
             <h5
               class="modal-title mt-3 mb-3"
@@ -35,7 +35,10 @@
             <h5 class="modal-title" id="exampleModalLongTitle" v-else>
               Aucun titre disponible
             </h5>
-            <p v-if="selectedProduct.desc.length">{{ selectedProduct.desc }}</p>
+            <p
+              v-if="selectedProduct.desc.length"
+              v-html="selectedProduct.desc"
+            ></p>
             <p v-else>Aucun description disponible</p>
           </div>
         </div>

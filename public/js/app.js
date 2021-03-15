@@ -2037,6 +2037,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -8700,7 +8709,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.pointer[data-v-747b95f5] {\n  cursor: pointer !important;\n}\n.product[data-v-747b95f5] {\n  transition: all 0.35s ease-in-out;\n}\n.products-enter[data-v-747b95f5] {\n  transform: scale(0.5) translatey(-80px);\n  opacity: 0;\n}\n.products-leave-to[data-v-747b95f5] {\n  transform: translatey(30px);\n  opacity: 0;\n}\n.products-leave-active[data-v-747b95f5] {\n  position: absolute;\n  z-index: -1;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.pagination[data-v-747b95f5] {\n  padding-left: 36px !important;\n}\n.pointer[data-v-747b95f5] {\n  cursor: pointer !important;\n}\n.product[data-v-747b95f5] {\n  transition: all 0.35s ease-in-out;\n}\n.products-enter[data-v-747b95f5] {\n  transform: scale(0.5) translatey(-80px);\n  opacity: 0;\n}\n.products-leave-to[data-v-747b95f5] {\n  transform: translatey(30px);\n  opacity: 0;\n}\n.products-leave-active[data-v-747b95f5] {\n  position: absolute;\n  z-index: -1;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53967,177 +53976,188 @@ var render = function() {
             _vm._m(1)
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-2 portfolio-flters-wrapper" }, [
-              _c(
-                "ul",
-                { attrs: { id: "portfolio-flters" } },
-                [
-                  _c(
-                    "li",
-                    {
-                      class: [
-                        _vm.selectedCategory == "all" ? "filter-active" : ""
-                      ],
-                      on: {
-                        click: function($event) {
-                          return _vm.handleClick()
-                        }
-                      }
-                    },
-                    [_vm._v("\n              All\n            ")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.allCategories, function(category) {
-                    return _c(
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-2 portfolio-flters-wrapper" }, [
+                _c(
+                  "ul",
+                  { attrs: { id: "portfolio-flters" } },
+                  [
+                    _c(
                       "li",
                       {
-                        key: category.id,
                         class: [
-                          _vm.selectedCategory == category.id
-                            ? "filter-active"
-                            : ""
+                          _vm.selectedCategory == "all" ? "filter-active" : ""
                         ],
-                        attrs: { "data-filter": "." + category.id },
                         on: {
                           click: function($event) {
-                            return _vm.handleClick(category.id)
+                            return _vm.handleClick()
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n              " +
-                            _vm._s(category.name) +
-                            "\n            "
-                        )
-                      ]
-                    )
-                  })
-                ],
-                2
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-10" }, [
-              _vm.filteredProducts.length
-                ? _c(
-                    "div",
-                    [
-                      _c(
-                        "paginate",
+                      [_vm._v("\n                All\n              ")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.allCategories, function(category) {
+                      return _c(
+                        "li",
                         {
-                          attrs: {
-                            name: "filteredProducts",
-                            list: _vm.filteredProducts,
-                            per: 6
+                          key: category.id,
+                          class: [
+                            _vm.selectedCategory == category.id
+                              ? "filter-active"
+                              : ""
+                          ],
+                          attrs: { "data-filter": "." + category.id },
+                          on: {
+                            click: function($event) {
+                              return _vm.handleClick(category.id)
+                            }
                           }
                         },
                         [
-                          _c(
-                            "transition-group",
-                            {
-                              staticClass: "row products portfolio-container",
-                              attrs: { name: "products", tag: "div" }
-                            },
-                            _vm._l(_vm.paginated("filteredProducts"), function(
-                              product
-                            ) {
-                              return _c(
-                                "div",
-                                {
-                                  key: product.id,
-                                  staticClass:
-                                    "col-lg-4 col-md-6 portfolio-item product"
-                                },
-                                [
-                                  _c("img", {
-                                    staticClass: "img-fluid",
-                                    attrs: {
-                                      src: product.resizedImage,
-                                      alt: ""
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "portfolio-info" }, [
-                                    _c("h4", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("truncate")(product.title)
-                                        )
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass:
-                                          "venobox preview-link ml-5 btn btn-link",
-                                        attrs: {
-                                          href: product.image,
-                                          "data-gall": "portfolioGallery",
-                                          title: product.title
-                                        }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-search-plus"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    product.title.length || product.desc.length
-                                      ? _c(
-                                          "button",
-                                          {
-                                            staticClass:
-                                              "details-link btn btn-link",
-                                            attrs: {
-                                              "data-toggle": "modal",
-                                              "data-target":
-                                                "#exampleModalCenter",
-                                              title: "More Details"
-                                            },
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.handleSelectProduct(
-                                                  product
-                                                )
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-info-circle"
-                                            })
-                                          ]
-                                        )
-                                      : _vm._e()
-                                  ])
-                                ]
-                              )
-                            }),
-                            0
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(category.name) +
+                              "\n              "
                           )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("paginate-links", {
-                        attrs: {
-                          for: "filteredProducts",
-                          "show-step-links": true,
-                          classes: {
-                            ul: "pagination",
-                            li: ["page-item", "pointer"],
-                            a: ["page-link", "pointer"]
+                        ]
+                      )
+                    })
+                  ],
+                  2
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-10" }, [
+                _vm.filteredProducts.length
+                  ? _c(
+                      "div",
+                      [
+                        _c(
+                          "paginate",
+                          {
+                            attrs: {
+                              name: "filteredProducts",
+                              list: _vm.filteredProducts,
+                              per: 6
+                            }
+                          },
+                          [
+                            _c(
+                              "transition-group",
+                              {
+                                staticClass: "row products portfolio-container",
+                                attrs: { name: "products", tag: "div" }
+                              },
+                              _vm._l(
+                                _vm.paginated("filteredProducts"),
+                                function(product) {
+                                  return _c(
+                                    "div",
+                                    {
+                                      key: product.id,
+                                      staticClass:
+                                        "col-lg-4 col-md-6 portfolio-item product"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "img-fluid",
+                                        attrs: {
+                                          src: product.resizedImage,
+                                          alt: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "portfolio-info" },
+                                        [
+                                          _c("h4", [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm._f("truncate")(
+                                                  product.title
+                                                )
+                                              )
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "venobox preview-link ml-5 btn btn-link",
+                                              attrs: {
+                                                href: product.image,
+                                                "data-gall": "portfolioGallery",
+                                                title: product.title
+                                              }
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fa fa-search-plus"
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          product.title.length ||
+                                          product.desc.length
+                                            ? _c(
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "details-link btn btn-link",
+                                                  attrs: {
+                                                    "data-toggle": "modal",
+                                                    "data-target":
+                                                      "#exampleModalCenter",
+                                                    title: "More Details"
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      return _vm.handleSelectProduct(
+                                                        product
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-info-circle"
+                                                  })
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                }
+                              ),
+                              0
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("paginate-links", {
+                          attrs: {
+                            for: "filteredProducts",
+                            "show-step-links": true,
+                            classes: {
+                              ul: "pagination",
+                              li: ["page-item", "pointer"],
+                              a: ["page-link", "pointer"]
+                            }
                           }
-                        }
-                      })
-                    ],
-                    1
-                  )
-                : _c("div", [_vm._m(2)])
+                        })
+                      ],
+                      1
+                    )
+                  : _c("div", [_vm._m(2)])
+              ])
             ])
           ])
         ]),
@@ -54192,7 +54212,7 @@ var staticRenderFns = [
       _c("h5", [
         _c("i", { staticClass: "fa fa-exclamation-circle" }),
         _vm._v(
-          " Aucun produit ne\n                correspond à votre requête\n              "
+          " Aucun produit ne\n                  correspond à votre requête\n                "
         )
       ])
     ])

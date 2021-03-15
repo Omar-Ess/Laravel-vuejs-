@@ -92,7 +92,7 @@
                     width="100"
                     height="100"
                     :src="product.resizedImage"
-                    class="img-fluid"
+                    class="img-fluid img-thumbnail"
                   />
                 </td>
                 <td>{{ product.created_at | formatedDate }}</td>

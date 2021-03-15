@@ -24,85 +24,94 @@
             ></span>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-2 portfolio-flters-wrapper">
-            <ul id="portfolio-flters">
-              <li
-                @click="handleClick()"
-                :class="[selectedCategory == 'all' ? 'filter-active' : '']"
-              >
-                All
-              </li>
-              <li
-                @click="handleClick(category.id)"
-                v-for="category in allCategories"
-                :key="category.id"
-                :data-filter="'.' + category.id"
-                :class="[
-                  selectedCategory == category.id ? 'filter-active' : '',
-                ]"
-              >
-                {{ category.name }}
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-10">
-            <div v-if="filteredProducts.length">
-              <paginate name="filteredProducts" :list="filteredProducts" :per="6">
-                <transition-group
-                  name="products"
-                  tag="div"
-                  class="row products portfolio-container"
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 portfolio-flters-wrapper">
+              <ul id="portfolio-flters">
+                <li
+                  @click="handleClick()"
+                  :class="[selectedCategory == 'all' ? 'filter-active' : '']"
                 >
-                  <div
-                    class="col-lg-4 col-md-6 portfolio-item product"
-                    v-for="product in paginated('filteredProducts')"
-                    :key="product.id"
-                  >
-                    <img :src="product.resizedImage" class="img-fluid" alt="" />
-                    <div class="portfolio-info">
-                      <h4>{{ product.title | truncate }}</h4>
-
-                      <a
-                        :href="product.image"
-                        data-gall="portfolioGallery"
-                        class="venobox preview-link ml-5 btn btn-link"
-                        :title="product.title"
-                        ><i class="fa fa-search-plus"></i
-                      ></a>
-
-                      <button
-                        v-if="product.title.length || product.desc.length"
-                        @click="handleSelectProduct(product)"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        class="details-link btn btn-link"
-                        title="More Details"
-                      >
-                        <i class="fa fa-info-circle"></i>
-                      </button>
-                    </div>
-                  </div>
-                </transition-group>
-              </paginate>
-
-              <paginate-links
-                for="filteredProducts"
-                :show-step-links="true"
-                :classes="{
-                  ul: 'pagination',
-                  li: ['page-item', 'pointer'],
-                  a: ['page-link', 'pointer'],
-                }"
-              ></paginate-links>
+                  All
+                </li>
+                <li
+                  @click="handleClick(category.id)"
+                  v-for="category in allCategories"
+                  :key="category.id"
+                  :data-filter="'.' + category.id"
+                  :class="[
+                    selectedCategory == category.id ? 'filter-active' : '',
+                  ]"
+                >
+                  {{ category.name }}
+                </li>
+              </ul>
             </div>
-            <div v-else>
-              <div class="alert alert-warning">
-                <h5>
-                  <i class="fa fa-exclamation-circle"></i> Aucun produit ne
-                  correspond à votre requête
-                </h5>
+            <div class="col-lg-10">
+              <div v-if="filteredProducts.length">
+                <paginate
+                  name="filteredProducts"
+                  :list="filteredProducts"
+                  :per="6"
+                >
+                  <transition-group
+                    name="products"
+                    tag="div"
+                    class="row products portfolio-container"
+                  >
+                    <div
+                      class="col-lg-4 col-md-6 portfolio-item product"
+                      v-for="product in paginated('filteredProducts')"
+                      :key="product.id"
+                    >
+                      <img
+                        :src="product.resizedImage"
+                        class="img-fluid"
+                        alt=""
+                      />
+                      <div class="portfolio-info">
+                        <h4>{{ product.title | truncate }}</h4>
+
+                        <a
+                          :href="product.image"
+                          data-gall="portfolioGallery"
+                          class="venobox preview-link ml-5 btn btn-link"
+                          :title="product.title"
+                          ><i class="fa fa-search-plus"></i
+                        ></a>
+
+                        <button
+                          v-if="product.title.length || product.desc.length"
+                          @click="handleSelectProduct(product)"
+                          data-toggle="modal"
+                          data-target="#exampleModalCenter"
+                          class="details-link btn btn-link"
+                          title="More Details"
+                        >
+                          <i class="fa fa-info-circle"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </transition-group>
+                </paginate>
+
+                <paginate-links
+                  for="filteredProducts"
+                  :show-step-links="true"
+                  :classes="{
+                    ul: 'pagination',
+                    li: ['page-item', 'pointer'],
+                    a: ['page-link', 'pointer'],
+                  }"
+                ></paginate-links>
+              </div>
+              <div v-else>
+                <div class="alert alert-warning">
+                  <h5>
+                    <i class="fa fa-exclamation-circle"></i> Aucun produit ne
+                    correspond à votre requête
+                  </h5>
+                </div>
               </div>
             </div>
           </div>
@@ -133,7 +142,6 @@ export default {
   },
   computed: {
     filteredProducts() {
-
       return this.allProducts.filter((product) => {
         return this.query
           .toLowerCase()
@@ -172,6 +180,9 @@ export default {
 </script>
 
 <style scoped>
+.pagination {
+  padding-left: 36px !important;
+}
 .pointer {
   cursor: pointer !important;
 }
