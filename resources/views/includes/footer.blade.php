@@ -38,9 +38,9 @@
                         <h4>Notre Horaire</h4>
 
                         <ul>
-                            <li><i class="fa fa-circle mr-1" style="font-size: 8px"></i>Samedi-Jeudi: 9:00h - 20:00H
+                            <li><i class="fa fa-circle mr-1" style="font-size: 8px"></i>Lundi-Samedi: 9:00h - 20:00H
                             </li>
-                            <li><i class="fa fa-circle mr-1" style="font-size: 8px"></i>Vendreudi: Off</li>
+                            <li><i class="fa fa-circle mr-1" style="font-size: 8px"></i>Dimanche: Off</li>
                         </ul>
                     </div>
 
