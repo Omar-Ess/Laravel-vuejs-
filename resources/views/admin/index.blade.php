@@ -45,8 +45,8 @@
 
         <script src="{{ asset('js/admin/app.js') }}" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        {{-- <script src="http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
-        </script> --}}
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js">
+        </script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
