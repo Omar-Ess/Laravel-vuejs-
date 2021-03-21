@@ -39,14 +39,7 @@ class ContactController extends Controller
             $email = "tousalik@gmail.com";
         }
         try {
-            $markdown = Container::getInstance()->make(Markdown::class);
-            $html = $markdown->render('emails.contact', ['subject' => $request->subject,  'sender' => $sender, 'msg' => $request->message]);
-            Mail::html($html, function ($message) use ($email, $sender) {
-                $message->to($email)
-                    ->replyTo($sender->email)
-                    ->subject(request()->subject);
-            });
-            // Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
+            Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
             return redirect()->route('contact.index')->with('success_message', 'merci de nous avoir contacté, nous vous répondrons dans les plus brefs délais');
         } catch (\Exception $ex) {
             dd($ex);
