@@ -36,21 +36,24 @@ class ProductController extends Controller
     {
 
 
-
-        $product = new Product();
-        $product->title = $request->title == null ? '' : $request->title;
-        $product->desc = $request->desc == null ? '' : $request->desc;
-        $product->category_id = $request->category_id;
-        $product->save();
-        // file upload
-        $fileNameToDB = $this->uploadFile($request, $product->id);
-        $product->image = $fileNameToDB[0];
-        $product->resizedImage = $fileNameToDB[1];
-        $product->save();
-        return response()->json([
-            'message' => 'product created succefully',
-            'product' => $product
-        ], 201);
+        try {
+            $product = new Product();
+            $product->title = $request->title == null ? '' : $request->title;
+            $product->desc = $request->desc == null ? '' : $request->desc;
+            $product->category_id = $request->category_id;
+            $product->save();
+            // file upload
+            $fileNameToDB = $this->uploadFile($request, $product->id);
+            $product->image = $fileNameToDB[0];
+            $product->resizedImage = $fileNameToDB[1];
+            $product->save();
+            return response()->json([
+                'message' => 'product created succefully',
+                'product' => $product
+            ], 201);
+        } catch (\Exception $err) {
+            dd($err);
+        }
     }
 
     /**
@@ -75,26 +78,23 @@ class ProductController extends Controller
      */
     public function update(ProductUpdateRequest $request, Product $product)
     {
-        try {
-            // file upload
-            if ($request->hasFile('newImage')) {
-                $product->deleteOldImages();
-                $fileNameToDB = $this->uploadFile($request, $product->id);
-                $product->image = $fileNameToDB[0];
-                $product->resizedImage = $fileNameToDB[1];
-            }
-            $product->title = $request->title == null ? '' : $request->title;
-            $product->desc = $request->desc == null ? '' : $request->desc;
-            $product->category_id = $request->category_id;
-            $product->save();
-            return response()->json([
-                'message' => 'product updated succefully',
-                'product' => $product
 
-            ], 200);
-        } catch (\Exception $err) {
-            dd($err);
+        // file upload
+        if ($request->hasFile('newImage')) {
+            $product->deleteOldImages();
+            $fileNameToDB = $this->uploadFile($request, $product->id);
+            $product->image = $fileNameToDB[0];
+            $product->resizedImage = $fileNameToDB[1];
         }
+        $product->title = $request->title == null ? '' : $request->title;
+        $product->desc = $request->desc == null ? '' : $request->desc;
+        $product->category_id = $request->category_id;
+        $product->save();
+        return response()->json([
+            'message' => 'product updated succefully',
+            'product' => $product
+
+        ], 200);
     }
 
     /**
