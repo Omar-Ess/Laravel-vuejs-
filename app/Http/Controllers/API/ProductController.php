@@ -36,7 +36,7 @@ class ProductController extends Controller
     {
 
 
-        try {
+
             $product = new Product();
             $product->title = $request->title == null ? '' : $request->title;
             $product->desc = $request->desc == null ? '' : $request->desc;
@@ -51,9 +51,7 @@ class ProductController extends Controller
                 'message' => 'product created succefully',
                 'product' => $product
             ], 201);
-        } catch (\Exception $err) {
-            dd($err);
-        }
+ 
     }
 
     /**

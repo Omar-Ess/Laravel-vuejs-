@@ -38,11 +38,9 @@ class ContactController extends Controller
         if (!$email  || $email == '') {
             $email = "tousalik@gmail.com";
         }
-        try {
+
             Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
             return redirect()->route('contact.index')->with('success_message', 'merci de nous avoir contacté, nous vous répondrons dans les plus brefs délais');
-        } catch (\Exception $ex) {
-            dd($ex);
-        }
+
     }
 }
