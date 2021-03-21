@@ -1,7 +1,6 @@
 @component('mail::message')
 # {{$subject}}
-
-{{$message}}
+{{$msg}}
 
 
 

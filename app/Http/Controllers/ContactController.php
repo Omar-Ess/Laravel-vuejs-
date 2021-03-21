@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Models\Section;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Markdown;
+use Illuminate\Container\Container;
 use Illuminate\Support\Facades\Mail;
 use App\Notifications\ContactNotification;
 use Illuminate\Support\Facades\Notification;
@@ -37,10 +39,14 @@ class ContactController extends Controller
             $email = "tousalik@gmail.com";
         }
         try {
-            // Mail::raw($request->message, function ($message) use ($email, $sender) {
-            //     $message->to($email)->view('erer')->replyTo($sender->email)->subject(request()->subject);
-            // });
-            Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
+            $markdown = Container::getInstance()->make(Markdown::class);
+            $html = $markdown->render('emails.contact', ['subject' => $request->subject,  'sender' => $sender, 'msg' => $request->message]);
+            Mail::html($html, function ($message) use ($email, $sender) {
+                $message->to($email)
+                    ->replyTo($sender->email)
+                    ->subject(request()->subject);
+            });
+            // Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
             return redirect()->route('contact.index')->with('success_message', 'merci de nous avoir contacté, nous vous répondrons dans les plus brefs délais');
         } catch (\Exception $ex) {
             dd($ex);

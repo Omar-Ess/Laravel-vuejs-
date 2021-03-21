@@ -35,7 +35,7 @@ class ContactNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['database', 'broadcast' , 'email'];
+        return ['database', 'broadcast' ];
     }
 
     /**
@@ -44,13 +44,13 @@ class ContactNotification extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
-        return (new MailMessage)
-            ->from($this->sender->email, $this->sender->name)
-            ->subject($this->subject)
-            ->line($this->message);
-    }
+    // public function toMail($notifiable)
+    // {
+    //     return (new MailMessage)
+    //         ->from($this->sender->email, $this->sender->name)
+    //         ->subject($this->subject)
+    //         ->line($this->message);
+    // }
 
     /**
      * Get the array representation of the notification.
