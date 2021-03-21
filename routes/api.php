@@ -27,7 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::group(['middleware' => 'auth:api'], function () {
+// Route::group(['middleware' => 'auth:api'], function () {
 
     //user routes
     Route::delete('/users/bulk/{ids}', [UserController::class, 'bulk_destroy']);
@@ -62,4 +62,4 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     // emails routes
     Route::apiResource('emails', EmailController::class)->only(['index', 'show']);
-});
+// });
