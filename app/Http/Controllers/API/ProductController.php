@@ -77,14 +77,12 @@ class ProductController extends Controller
     {
         try {
             // file upload
-            // if ($request->hasFile('newImage')) {
-            //     $product->deleteOldImages();
-            //     $fileNameToDB = $this->uploadFile($request, $product->id);
-            //     $product->image = $fileNameToDB[0];
-            //     $product->resizedImage = $fileNameToDB[1];
-            // }
-            $product->image = 'erer';
-            $product->resizedImage = 'erer';
+            if ($request->hasFile('newImage')) {
+                $product->deleteOldImages();
+                $fileNameToDB = $this->uploadFile($request, $product->id);
+                $product->image = $fileNameToDB[0];
+                $product->resizedImage = $fileNameToDB[1];
+            }
             $product->title = $request->title == null ? '' : $request->title;
             $product->desc = $request->desc == null ? '' : $request->desc;
             $product->category_id = $request->category_id;

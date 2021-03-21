@@ -25,7 +25,7 @@ class UpdateProfileInfoRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email|unique:users,email,' . auth()->id(),
         ];
     }
     public function messages()
