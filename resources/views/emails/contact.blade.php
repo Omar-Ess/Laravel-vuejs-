@@ -322,7 +322,9 @@
                                 <!-- Body content -->
                                 <tr>
                                     <td class="content-cell">
-                                        {{ $subject }}
+                                        <h1>{{ $subject }}</h1>
+                                        <p>{{ $msg }}</p>
+                                        De : <strong>{{ $sender->name }} {{_('@')}}{{$sender->email }}</strong>
                                     </td>
                                 </tr>
                             </table>
