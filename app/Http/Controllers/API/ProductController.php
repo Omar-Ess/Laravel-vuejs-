@@ -75,6 +75,7 @@ class ProductController extends Controller
      */
     public function update(ProductUpdateRequest $request, Product $product)
     {
+        try {
         // file upload
         if ($request->hasFile('newImage')) {
             $product->deleteOldImages();
@@ -92,6 +93,10 @@ class ProductController extends Controller
             'product' => $product
 
         ], 200);
+        }catch(\Exception $err) {
+      dd($err);
+        }
+
     }
 
     /**
