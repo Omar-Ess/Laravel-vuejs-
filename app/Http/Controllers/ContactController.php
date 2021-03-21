@@ -33,18 +33,17 @@ class ContactController extends Controller
         Notification::send($users, new ContactNotification($request->subject, $request->message, $sender));
         // send email to the actual email section content
         $email = Section::where('name', 'email')->pluck('content')->first();
-        if(!$email  || $email=='') {
-             $email="tousalik@gmail.com";
+        if (!$email  || $email == '') {
+            $email = "tousalik@gmail.com";
         }
         try {
-            Mail::raw('Testmail', function ($message) use($email ) {
-                $message->to($email)->subject( request()->subject);
+            Mail::raw($request->message, function ($message) use ($email, $sender) {
+                $message->to($email)->replyTo($sender->email)->subject(request()->subject);
             });
             // Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
             return redirect()->route('contact.index')->with('success_message', 'merci de nous avoir contacté, nous vous répondrons dans les plus brefs délais');
-        }catch(\Exception $ex) {
-          dd( $ex);
+        } catch (\Exception $ex) {
+            dd($ex);
         }
-
     }
 }
