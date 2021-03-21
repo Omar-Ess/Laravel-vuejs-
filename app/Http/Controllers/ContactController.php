@@ -37,7 +37,10 @@ class ContactController extends Controller
              $email="tousalik@gmail.com";
         }
         try {
-            Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
+            Mail::raw('Testmail', function ($message) use($email ) {
+                $message->to($email)->subject( request()->subject);
+            });
+            // Mail::to($email)->send(new ContactMail($request->subject, $request->message, $sender));
             return redirect()->route('contact.index')->with('success_message', 'merci de nous avoir contacté, nous vous répondrons dans les plus brefs délais');
         }catch(\Exception $ex) {
           dd( $ex);
