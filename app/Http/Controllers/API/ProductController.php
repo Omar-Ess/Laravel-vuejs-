@@ -76,27 +76,27 @@ class ProductController extends Controller
     public function update(ProductUpdateRequest $request, Product $product)
     {
         try {
-        // file upload
-        if ($request->hasFile('newImage')) {
-            $product->deleteOldImages();
-            $fileNameToDB = $this->uploadFile($request, $product->id);
-            $product->image = $fileNameToDB[0];
-            $product->resizedImage = $fileNameToDB[1];
+            // file upload
+            // if ($request->hasFile('newImage')) {
+            //     $product->deleteOldImages();
+            //     $fileNameToDB = $this->uploadFile($request, $product->id);
+            //     $product->image = $fileNameToDB[0];
+            //     $product->resizedImage = $fileNameToDB[1];
+            // }
+            $product->image = 'erer';
+            $product->resizedImage = 'erer';
+            $product->title = $request->title == null ? '' : $request->title;
+            $product->desc = $request->desc == null ? '' : $request->desc;
+            $product->category_id = $request->category_id;
+            $product->save();
+            return response()->json([
+                'message' => 'product updated succefully',
+                'product' => $product
+
+            ], 200);
+        } catch (\Exception $err) {
+            dd($err);
         }
-
-        $product->title = $request->title == null ? '' : $request->title;
-        $product->desc = $request->desc == null ? '' : $request->desc;
-        $product->category_id = $request->category_id;
-        $product->save();
-        return response()->json([
-            'message' => 'product updated succefully',
-            'product' => $product
-
-        ], 200);
-        }catch(\Exception $err) {
-      dd($err);
-        }
-
     }
 
     /**
