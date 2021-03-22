@@ -35,7 +35,9 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      newAuthUser: {},
+      newAuthUser: {
+         
+      },
     };
   },
   computed: {
@@ -50,6 +52,9 @@ export default {
   methods: {
     ...mapActions("auth", ["updateProfileInfo"]),
   },
+  created() {
+    this.newAuthUser = {...this.authUser}
+  }
 };
 </script>
 

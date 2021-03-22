@@ -65,7 +65,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return this.isLoading["post"];
     }
   }, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)("auth", ["authUser", "isLoading", "serverErrors"])),
-  methods: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapActions)("auth", ["updateProfileInfo"]))
+  methods: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapActions)("auth", ["updateProfileInfo"])),
+  created: function created() {
+    this.newAuthUser = _objectSpread({}, this.authUser);
+  }
 });
 
 /***/ }),
