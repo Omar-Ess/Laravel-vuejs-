@@ -39,7 +39,7 @@
               }
             }
     </script>
-
+    <meta name="google-site-verification" content="cZHO1JcjQOlRMRZfdgGSP6t3zx5hHXi4Uz4y9FLSwWM" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/storage/images/design/favicons/apple-touch-icon.png">

@@ -8,9 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- SEO -->
     <title>@yield('title') {{ config('app.name') }}</title>
+    <meta name="google-site-verification" content="cZHO1JcjQOlRMRZfdgGSP6t3zx5hHXi4Uz4y9FLSwWM" />
 
-    {{-- fav icon --}}
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/storage/images/design/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/storage/images/design/favicons/favicon-32x32.png">
