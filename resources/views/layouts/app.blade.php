@@ -8,11 +8,47 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} @yield('title')</title>
+    <!-- SEO -->
+    <title>@yield('title'){{ config('app.name') }}</title>
+    <meta content="@yield('description')" name="description">
+    <link rel="canonical" href="@yield('canonical')" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@yield('title'){{ config('app.name') }}" />
+    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:image" content="/storage/images/design/about-bg.jpg" />
+    <meta property="og:url" content="@yield('canonical')" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:site_name" content="{{config('app.name')}}" />
+    <meta name="twitter:image:alt" content="{{config('app.name')}} Logo" />
+    <meta name="keywords"
+        content="sacs bottega veneta, sacs gucci, sacs coach, sacs michael kors, sacs a main luxe, sacs aldo maroc, sacs aldo prix, sacs, vêtement, Articles de Sport, Luxe Et Moderne, Meilleur Cuir, Fabriqué en Turquie" />
+    <script type="application/ld+json">
+        {
+              "@context" : "http://schema.org",
+              "@type" : "LocalBusiness",
+              "name" : "Tousalik",
+              "email" : "",
+              "openingHoursSpecification" : {
+                "@type" : "OpeningHoursSpecification",
+                "dayOfWeek" : {
+                  "@type" : "DayOfWeek",
+                  "name" : "Lundi-Samedi"
+                },
+                "opens" : "09:00",
+                "closes" : "20:00"
+              }
+            }
+    </script>
+
 
     <!-- Favicons -->
-    <link href="/storage/images/design/favicon.png" rel="icon">
-    {{-- <link href="/storage/images/design/apple-touch-icon.png" rel="apple-touch-icon"> --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/storage/images/design/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/storage/images/design/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/storage/images/design/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/storage/images/design/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/storage/images/design/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
 
 
     <!-- Fonts -->

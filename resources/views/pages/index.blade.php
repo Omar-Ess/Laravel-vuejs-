@@ -1,5 +1,10 @@
 @extends('layouts.app')
-
+@section('description')
+Fabrication et vente de sacs et des articles de Sport Luxe Et Moderne avec un meilleure qualité
+@endsection
+@section('canonical')
+https://tousalik.com/
+@endsection
 
 @section('content')
     @include('includes.hero' , ['header' , $header])

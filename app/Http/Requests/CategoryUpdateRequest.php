@@ -24,7 +24,7 @@ class CategoryUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'slug' => 'required|unique:categories,slug,'.$this->category->id
+            'slug' => 'required|unique:categories,slug,' . $this->category->id
         ];
     }
 

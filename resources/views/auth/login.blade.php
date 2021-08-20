@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 @section('title')
- | Login
+Connexion -
 @endsection
 @section('content')
     <div class="card o-hidden border-0 shadow-lg my-5">
